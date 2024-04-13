@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+ 
+    <title>Lägg till kurs</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <i class="fas fa-file-alt"></i>
+
+            <h4>cv</h4>
+        </div>
+        <div class="bars-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-items">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i> Startsida
+                </a>
+            </li>
+            
+            <li class="nav-item">
+              
+              
+                <a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i>
+                    Om</a>
+            </li>
+            <li class="nav-item">
+              
+                <a href="courses.html" class="nav-link">  <i class="fas fa-graduation-cap"></i>
+                    Lägg till kurser</a>
+            </li>
+            
+        </ul>
+    </nav>
+
+
+    <div class="container">
+        <h2>Lägg till en ny kurs</h2>
+        <form id="courseform"  method="post">
+
+            <div class="form-group">
+                <label for="course_code">Kurskod:</label>
+                <input type="text" id="course_code" name="course_code" required>
+            </div>
+
+            <div class="form-group">
+                <label for="course_name">Kursnamn:</label>
+                <input type="text" id="course_name" name="course_name" required>
+            </div>
+
+         
+            <div class="form-group">
+                <label for="course_plan">Kursplan:</label>
+                <input type="text" id="course_plan" name="syllabus" required> <!-- Lägg till attributet required här -->
+            </div>
+            
+            <div class="form-group">
+                <label for="course_progress">Kursframsteg:</label>
+                <select id="course_progress" name="progression" required>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                </select>
+            </div>
+            
+            <button type="submit">Lägg till kurs</button>
+        </form>
+    </div>
+<!-- Footer -->
+<footer>
+    <div class="footer-section">
+      
+        <p style="color: blue;" class="copyright">&copy; cv -Server-baserad webbutveckling</p>
+        
+        <div class="socials">
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
