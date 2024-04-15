@@ -4,22 +4,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "build": "webpack"
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "18.x"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.19.2",
     "mariadb": "^3.3.0",
-    "mysql": "^2.18.1",
-    "nodemon": "^2.0.12"
+    "mysql": "^2.18.1"
   },
   "keywords": [],
-  "description": "",
-  "devDependencies": {
-    "webpack-cli": "^5.1.4",
-    "webpack": "^5.91.0"
-  }
+  "description": ""
 }
