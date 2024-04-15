@@ -19,11 +19,11 @@ app.listen(PORT, () => {
 
 // Skapa en anslutning till MySQL-databasen
 const connection = mysql.createConnection({
-    host: "127.0.0.1", // Värd för databasservern
+    host: "sql6.freemysqlhosting.net", // Värd för databasservern
     port: 3306, // Port för databasanslutning
-    user: "root", // Användarnamn för databasanslutning
-    password: "", // Lösenord för databasanslutning
-    database: "cv" // Namnet på den databas som ska användas
+    user: "sql6699251", // Användarnamn för databasanslutning
+    password: "VlbbgfbCL9", // Lösenord för databasanslutning
+    database: "sql6699251" // Namnet på den databas som ska användas
 }); 
 
 // Hantera anslutningsstatus
