@@ -12,7 +12,7 @@ document.querySelectorAll(".nav-link").forEach((item) => {
 
 // Funktion för att hämta alla kurser från servern och visa dem i tabellen.
 function getAllCourses() {
-    const url = "http://localhost:3001/fetch-all-courses";
+    const url = "https://backend-baserad-service-task.onrender.com/fetch-all-courses";
     const table = document.getElementById("course");
     fetch(url)
     .then((response) => {
@@ -52,7 +52,7 @@ function createCourse() {
             data[key] = value;
         });
 
-        const url = "http://localhost:3001/create";
+        const url = "https://backend-baserad-service-task.onrender.com/create";
         fetch(url, {
             method: "POST",
             headers: {
@@ -74,7 +74,7 @@ function createCourse() {
 
 // Funktion för att radera en kurs.
 function deleteCourse(courseID) {
-    const url = "http://localhost:3001/delete";
+    const url = "https://backend-baserad-service-task.onrender.com/delete";
     fetch(url, {
         method: "DELETE",
         headers: {
