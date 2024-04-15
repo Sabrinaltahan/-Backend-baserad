@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "build": "webpack"
   },
   "author": "",
   "license": "ISC",
@@ -16,5 +17,9 @@
     "nodemon": "^2.0.12"
   },
   "keywords": [],
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  }
 }
