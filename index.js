@@ -12,6 +12,9 @@ app.use(express.static("public"));
 // Använd JSON-parser för att tolka inkommande JSON-data
 app.use(express.json()); 
 
+
+app.use(express.json());       // to support JSON-encoded bodies
+app.use(express.urlencoded()); // to support URL-encoded bodies
 // Lyssna på angivet portnummer och skriv ut en bekräftelse
 app.listen(PORT, () => {
     console.log("Express-servern körs på port nummer: " + PORT);
@@ -19,11 +22,11 @@ app.listen(PORT, () => {
 
 // Skapa en anslutning till MySQL-databasen
 const connection = mysql.createConnection({
-    host: "sql6.freemysqlhosting.net", // Värd för databasservern
-    port: 3306, // Port för databasanslutning
-    user: "sql6699251", // Användarnamn för databasanslutning
-    password: "VlbbgfbCL9", // Lösenord för databasanslutning
-    database: "sql6699251" // Namnet på den databas som ska användas
+    host: "sql6.freesqldatabase.com",
+    port: 3306,
+    user: "sql6699922",
+    password: "VcNcnsXkxd",
+    database: "sql6699922"
 }); 
 
 // Hantera anslutningsstatus
@@ -45,19 +48,20 @@ app.get("/fetch-all-courses", (req, res) => {
 // Lägg till en ny kurs i databasen med uppgifter från inkommande begäran
 app.post("/create", (req, res) => {
     const body = req.body; // Hämta JSON-data från inkommande begäran
-    if(!body){
-        return res.sendStatus(400); // Returnera felstatus om ingen data skickades
-    }
-    // Utför en SQL-fråga för att lägga till en ny kurs med informationen från inkommande begäran
-    connection.query("INSERT INTO `courses` SET ?", {
-        course_code: body.course_code, 
-        course_name: body.course_name, 
-        syllabus: body.syllabus,
-        progression: body.progression 
-    }, (err, row, field) => {
-        if(err) throw err; // Kasta ett fel om det uppstår ett fel
-        res.sendStatus(200); // Returnera framgångsstatus om kursen har lagts till
-    })
+    res.send('Hello');
+    // if(!body){
+    //     return res.sendStatus(400); // Returnera felstatus om ingen data skickades
+    // }
+    // // Utför en SQL-fråga för att lägga till en ny kurs med informationen från inkommande begäran
+    // connection.query("INSERT INTO `courses` SET ?", {
+    //     course_code: body.course_code, 
+    //     course_name: body.course_name, 
+    //     syllabus: body.syllabus,
+    //     progression: body.progression 
+    // }, (err, row, field) => {
+    //     if(err) throw err; // Kasta ett fel om det uppstår ett fel
+    //     res.sendStatus(200); // Returnera framgångsstatus om kursen har lagts till
+    // })
 })
 
 // Ta bort en befintlig kurs från databasen med hjälp av kursens ID

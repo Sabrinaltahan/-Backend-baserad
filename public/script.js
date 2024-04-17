@@ -52,6 +52,8 @@ function createCourse() {
             data[key] = value;
         });
 
+        courseForm.innerHTML('dkjfkdjfkd');
+
         const url = "https://backend-baserad-service-task.onrender.com/create";
         fetch(url, {
             method: "POST",
